@@ -1,7 +1,25 @@
 package POO;
 
-public class SmartWatch {
+public class SmartWatch extends SmartDevice {
 
-    public SmartWatch() {
+    String band;
+    public SmartWatch() {}
+
+    public SmartWatch(boolean bluetooth, boolean nfc, boolean wifi, double screen, int battery, String band) {
+        super(bluetooth, nfc, wifi, screen, battery);
+        this.band = band;
+    }
+
+    @Override
+    public String toString() {
+        return "SmartWatch{" +
+                "band='" + band + '\'' +
+                ", bluetooth=" + bluetooth +
+                ", nfc=" + nfc +
+                ", wifi=" + wifi +
+                ", turn=" + turn +
+                ", screen=" + screen +
+                ", battery=" + battery +
+                '}';
     }
 }
